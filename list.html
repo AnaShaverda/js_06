@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <style>
+      #addUserForm {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid black;
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+      }
+      #addUserForm input {
+        height: 40px;
+      }
+      #addUserForm button {
+        padding: 20px;
+        cursor: pointer;
+      }
+    </style>
+    <div>
+      <form id="addUserForm">
+        <h2>add new user</h2>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" />
+        <label for="lastName">last Name</label>
+        <input type="text" id="lastName" />
+        <label for="age">Age</label>
+        <input type="text" id="age" />
+        <label for="city">city</label>
+        <input type="text" id="city" />
+        <button type="submit">submit</button>
+      </form>
+    </div>
+
     <div id="users"></div>
     <script src="newScript.js"></script>
   </body>

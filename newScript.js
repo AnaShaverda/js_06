@@ -11,78 +11,6 @@ const persons = [
     age: 28,
     city: "Kutaisi",
   },
-  {
-    firstName: "mariam",
-    lastName: "giorgadze",
-    age: 21,
-    city: "Rustavi",
-  },
-  {
-    firstName: "dato",
-    lastName: "kachkachishvili",
-    age: 30,
-    city: "Telavi",
-  },
-  {
-    firstName: "nino",
-    lastName: "tsiklauri",
-    age: 27,
-    city: "Zugdidi",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
-  {
-    firstName: "giorgi",
-    lastName: "melikishvili",
-    age: 24,
-    city: "Gori",
-  },
 ];
 
 const userList = document.getElementById("users");
@@ -116,3 +44,19 @@ function deleteUser() {
     });
   });
 }
+
+function addUser() {
+  const addForm = document.getElementById("addUserForm");
+  addForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const firstName = addForm.firstName.value;
+    const lastName = addForm.lastName.value;
+    const age = addForm.age.value;
+    const city = addForm.city.value;
+    persons.push({ firstName, lastName, age, city });
+    getUsers(persons);
+    addForm.reset();
+  });
+}
+
+addUser();
